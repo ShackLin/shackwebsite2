@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Sigmar&display=swap');
+
+* {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+
+ul,
+a {
+      text-decoration: none;
+      list-style: none;
+}
+
+.navbar {
+      background-color: #fff;
+      padding: 0;
+      z-index: 10;
+      width: 100%;
+      padding: 10px 0;
+      position: fixed;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.nightMode {
+      background-color: black;
+      padding: 0;
+      z-index: 10;
+      width: 100%;
+      padding: 10px 0;
+      position: fixed;
+}
+
+.navbarContainer {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row-reverse;
+      padding: 0 2rem;
+
+}
+
+.navItems {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+}
+
+.navItem {
+      text-align: center;
+      margin-right: 16px;
+      font-size: 21px;
+}
+
+.navLink {
+      /* vertical-align: top; */
+      padding: 10px;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      display: block;
+      overflow: hidden;
+}
+
+.whiteText {
+      padding: 10px;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      display: block;
+      overflow: hidden;
+      color: black;
+}
+
+.whiteText:hover {
+      color: #05ee5a;
+      bottom: 8px;
+}
+
+.whiteText::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      transition: width 0.3s infinite;
+}
+
+.whiteText:hover::before {
+      width: 100%;
+}
+
+
+.navLink:hover {
+      color: #fffb6c;
+      bottom: 0.5rem;
+}
+
+.navLink::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s infinite;
+}
+
+.navLink:hover::before {
+      width: 100%;
+}
+
+
+.IconsContainer {
+      display: flex;
+      top: 1rem;
+      width: 300px;
+      height: auto;
+      left: 3rem;
+}
+
+.iconSign {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+}
+
+.navLink {
+      position: relative;
+}
+
+.menuContainer {
+      display: block;
+      margin: 0 auto;
+      background-color: black;
+      opacity: 0.8;
+      z-index: 10px;
+}
+
+.navItems2 {
+      display: flex;
+      padding-top: 150px;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      cursor: pointer;
+}
+
+.navItem2 {
+      display: block;
+      text-align: center;
+      font-size: 21px;
+      margin: 20px 0;
+      cursor: pointer;
+}
+
+.navLink2 {
+      vertical-align: top;
+      padding: 10px 20px;
+      color: #fb2450;
+      text-align: center;
+      cursor: pointer;
+}
+
+.menuIcon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+}
+
+.menuIcon span {
+      width: 32px;
+      height: 5px;
+      background-color: #000;
+      margin-bottom: 7px;
+}
+
+.menuNightIcon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+}
+
+.menuNightIcon span {
+      width: 32px;
+      height: 5px;
+      background-color: #fff;
+      margin-bottom: 7px;
+}
+
+.iconLine {
+      width: 32px;
+      height: 5px;
+      background-color: #000;
+      margin-bottom: 7px;
+      transition: transform 0.3s ease-in-out;
+}
+
+.iconLineNight {
+      width: 32px;
+      height: 5px;
+      background-color: #fff;
+      margin-bottom: 7px;
+      transition: transform 0.3s ease-in-out;
+}
+
+.cross .iconLine:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 10px);
+}
+
+
+.cross .iconLine:nth-child(2) {
+      opacity: 0;
+
+}
+
+.cross .iconLine:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -10px);
+}
+
+.noScroll {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+}
+
+@media (min-width: 768px) {
+      .menuIcon {
+            display: none;
+            position: relative;
+            right: 2rem;
+      }
+}
+
+@media (max-width: 962px) {
+
+      .navLink,
+      .nightMode,
+      .whiteText {
+            font-size: 12px;
+      }
+}
+
+@media (max-width: 768px) {
+      .navbar {
+            height: 70px;
+      }
+
+      .nightMode {
+            height: 70px;
+      }
+
+      .IconsContainer {
+            margin: 0 auto;
+      }
+
+      .navItems {
+            display: none;
+      }
+
+      .menuIcon {
+            position: relative;
+            left: 50%;
+            top: 0.5rem;
+      }
+}
+
+.maskVisible {
+      display: block;
+}
+
+.mask {
+      display: none;
+}
